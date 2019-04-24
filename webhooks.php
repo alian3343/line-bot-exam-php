@@ -49,9 +49,10 @@ $objFopen = fopen($strFileName, 'a');
 fwrite($objFopen, $result);
 fclose($objFopen);
 			
+			 $stext = $event['message']['text'];
 			
 			echo $result . "\r\n";
-			echo $text . "\r\n";
+			echo $stext . "\r\n";
 		}
 	}
 }
