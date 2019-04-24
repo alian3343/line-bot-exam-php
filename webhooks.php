@@ -49,12 +49,12 @@ if (!is_null($events['events'])) {
 			echo $stext . "\r\n";
 			echo $result . "\r\n";
 			
+		}
 			$file = fopen('line.txt','a+')  or die("Unable to open file!");
 			$str = "$result\r\n";
-			fwrite($file,$text);
+			fwrite($file,$messages);
 			fclose($file);
 			
-		}
 	}
 }
 echo "OK";
