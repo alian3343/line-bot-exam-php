@@ -49,12 +49,10 @@ if (!is_null($events['events'])) {
 			echo $stext . "\r\n";
 			echo $result . "\r\n";
 			
-			
-			$strFileName = "line.txt";
-$objFopen = fopen($strFileName, 'w');
-fwrite($objFopen, $result);
-fclose($objFopen);
-			
+			$file = fopen('line.txt','a+')  or die("Unable to open file!");
+			$str = "$result\r\n";
+			fwrite($file,$str);
+			fclose($file);
 			
 		}
 	}
