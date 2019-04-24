@@ -50,11 +50,13 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 			
 		}
-			$file = fopen('line.txt','a+')  or die("Unable to open file!");
-			$str = "$result\r\n";
-			fwrite($file,$messages);
-			fclose($file);
 			
 	}
+	
+	$file = fopen('line.txt','a+')  or die("Unable to open file!");
+			$str = "$result\r\n";
+			fwrite($file,'OK');
+			fclose($file);
+			
 }
 echo "OK";
