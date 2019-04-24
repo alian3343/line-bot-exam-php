@@ -26,9 +26,7 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
-			$stext = [
-				'text' => $text
-			];
+			$stext = $event['text'];
 			
 			$stext = $event['source']['text'];
 			
