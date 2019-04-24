@@ -55,7 +55,7 @@ if (!is_null($events['events'])) {
 	
 	$file = fopen('line.txt','a+')  or die("Unable to open file!");
 			$str = "$result\r\n";
-			fwrite($file,'OK');
+			fwrite($file,"oK");
 			fclose($file);
 			
 }
