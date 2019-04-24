@@ -26,6 +26,8 @@ if (!is_null($events['events'])) {
 				'text' => $text
 			];
 
+			$stext = $event['source']['text'];
+			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -49,7 +51,7 @@ $objFopen = fopen($strFileName, 'a');
 fwrite($objFopen, $result);
 fclose($objFopen);
 			
-			 $stext = $event['message']['text'];
+			 
 			
 			echo $result . "\r\n";
 			echo $stext . "\r\n";
