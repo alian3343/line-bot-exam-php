@@ -44,17 +44,18 @@ if (!is_null($events['events'])) {
 			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$result = curl_exec($ch);
-			curl_close($ch);
-
-			$strFileName = "line.txt";
-$objFopen = fopen($strFileName, 'a');
-fwrite($objFopen, $result);
-fclose($objFopen);
-			
-			 
+			curl_close($ch);		 
 			
 			echo $stext . "\r\n";
 			echo $result . "\r\n";
+			
+			
+			$strFileName = "line.txt";
+$objFopen = fopen($strFileName, 'w');
+fwrite($objFopen, $result);
+fclose($objFopen);
+			
+			
 		}
 	}
 }
