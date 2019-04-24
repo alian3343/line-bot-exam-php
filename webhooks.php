@@ -51,7 +51,7 @@ fclose($objFopen);
 			
 			
 			echo $result . "\r\n";
-			echo $messages . "\r\n";
+			echo $text . "\r\n";
 		}
 	}
 }
