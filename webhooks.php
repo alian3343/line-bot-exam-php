@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
-			echo "$messages:$result" . "\r\n";
+			echo "$data:$result" . "\r\n";
 		}
 	}
 }
