@@ -44,6 +44,12 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
+			$strFileName = "line.txt";
+$objFopen = fopen($strFileName, 'a');
+fwrite($objFopen, $result);
+fclose($objFopen);
+			
+			
 			echo $result . "\r\n";
 			echo $messages . "\r\n";
 		}
