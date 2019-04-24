@@ -28,8 +28,6 @@ if (!is_null($events['events'])) {
 
 			$stext = $event['text'];
 			
-			$stext = $event['source']['text'];
-			
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
@@ -55,8 +53,8 @@ fclose($objFopen);
 			
 			 
 			
-			echo $result . "\r\n";
 			echo $stext . "\r\n";
+			echo $result . "\r\n";
 		}
 	}
 }
